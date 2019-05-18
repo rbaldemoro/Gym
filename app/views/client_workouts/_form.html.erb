@@ -1,0 +1,51 @@
+<div class="container-fluid">
+
+<%= form_with(model: client_workout, local: true) do |form| %>
+  <% if client_workout.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(client_workout.errors.count, "error") %> prohibited this client_workout from being saved:</h2>
+
+      <ul>
+      <% client_workout.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="card" style="width: 30rem;">
+  <div class="card-body">
+  
+  <div class="field">
+    <%= form.label :trainer %>
+    <%= form.text_field :trainer, class: "form-control" %>
+  </div>
+  <div class="field">
+    <%= form.label :client %>
+    <%= form.text_field :client, class: "form-control"%>
+  </div>
+
+  <div class="field">
+    <%= form.label :duration %>
+    <%= form.number_field :duration, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dateWorkout %>
+    <%= form.datetime_select :dateWorkout, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :amount %>
+    <%= form.text_field :amount, class: "form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class: "btn btn-success text-black" %>
+  </div>
+<% end %>
+
+  </div>
+</div>
+
+</div>

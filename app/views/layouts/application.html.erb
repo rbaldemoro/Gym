@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gym</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <script src="/app/assets/javascripts/jquery.js"></script>
+    <script src="/app/assets/javascripts/popper.js"></script>
+    <script src="/app/assets/javascripts/bootstrap.js"></script>
+   
+    <link rel="stylesheet" href="/app/assets/stylesheets/bootstrap.css">
+
+    <style type="text/css">
+    a:hover {
+      text-decoration: none;
+      background-color: transparent;
+    }
+    a {
+      color:black !important;
+    }
+    body {
+      margin: 0px;
+    }
+    </style>
+
+  </head>
+
+  <body>
+    <nav class="navbar navbar-dark bg-dark text-white justify-content-between">
+      <a class="navbar-brand">Navbar</a>
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </nav>
+
+    <%= yield %>
+  </body>
+</html>
